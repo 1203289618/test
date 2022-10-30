@@ -49,41 +49,7 @@ width: 97%;
 			
  
 </style>
-<script type="text/javascript">
-  window.onload=function(){ 
-	 
-	var ids = document.getElementById("id").value;
-	var id = "query"+","+ids;
-	$.ajax({
-		type: "post",
-		url : '/zjjyh/ShowImgServlet',
-		dataType:"json",
-        sync: false,
-        data:{id:id},
-        	 success: function(data){
-        		 document.getElementById("aac003").innerHTML = data.aac003;
-        		 document.getElementById("bgej47").innerHTML = data.bgej47;
-        		 document.getElementById("bgej31").innerHTML = data.bgej31;
-        		 document.getElementById("bgej33").innerHTML = data.bgej33;
-        		 document.getElementById("bgej55").innerHTML = data.bgej55;
-        		 document.getElementById("bgej45").innerHTML = data.bgej45;
-        		 document.getElementById("bgej46").innerHTML = data.bgej46;
-        		 document.getElementById("bgej47").innerHTML = data.bgej47;
-        		 document.getElementById("jieguo").innerHTML = '已完成该年度继续教育任务';
-        		 },
-        		 error:function(xhr, status, errMsg){
-        			 document.getElementById("aac003").innerHTML = "";
-            		 document.getElementById("bgej47").innerHTML = "";
-            		 document.getElementById("bgej31").innerHTML = "";
-            		 document.getElementById("bgej33").innerHTML = "";
-            		 document.getElementById("bgej55").innerHTML = "";
-        			 alert("数据有误，请重新刷新");
-        		}
-        	});
-} 
-  
- 
-	
+<script type="text/javascript">	
 	/*点击查询按钮触发的事件*/
 function check(){
 	var id = document.getElementById("id").value;
